@@ -42,7 +42,14 @@ func hello(){
 }
 ```
 
+# 変数の型種類(組み込み型)
+組み込み＝最初から使えるデータ型　　
+## 数値型
+|Group|Type|Description|
+|:---|:---|:---|
+|符号付整数|int8, int16, int32, int64|int8（-128 to 127）,int16（-32768 to 32767）,int32 (-2147483648 to 2147483647),int64 (-9223372036854775808 to 9223372036854775807)|
+
 
 # 参考サイト  
-「【Go】基本文法①(基礎)」<https://qiita.com/k-penguin-sato/items/1d0e1c6b4bf937996cd3>
+「【Go】基本文法①(基礎)」<https://qiita.com/k-penguin-sato/items/1d0e1c6b4bf937996cd3>    
 「Goで関数を定義して呼び出す方法」<https://www.codeflow.site/ja/article/how-to-define-and-call-functions-in-go>
