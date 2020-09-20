@@ -58,6 +58,9 @@ true（正）とfalse（誤）を保持する事ができる。
 |符号付整数|int8, int16, int32, int64|int8（-128 to 127）,int16（-32768 to 32767）,int32 (-2147483648 to 2147483647),int64 (-9223372036854775808 to 9223372036854775807)|
 |符号無し整数|uint8, uint16, uint32, uint64|uint8(0 to 255),uint16 (0 to 65535),uint32(0 to 4294967295),uint64  (0 to 18446744073709551615)|
   
+```byte```はuint8の別名として扱える。  
+```rune```はint32の別名として扱える。  
+  
 また下記でも表現ができる。  
 こちらのほうが実装に則した形で利用できそう。  
 ```
@@ -72,12 +75,35 @@ int      uintと同じサイズ
 ```
 float32   32bitの浮動小数点数
 float64   64bitの浮動小数点数
+```  
+  
+### 複素数  
+複素数とは、虚数と実数を足した数のこと。  
+自分文系なので、詳しいことは省く。。。。  
+  
+ちなみにデータ型は、
 ```
+complex64
+complex128
+```
+の2つで表現ができる。  
 
+## 文字列型  
+```String```で宣言可能  
+
+# 変数の初期化について
+変数を宣言する際に、初期値を設定することを「**変数の初期化**」という。  
+Goでは明示的に初期値を宣言しなくても、変数を使うことができる。  
+  
+その際、**ゼロ値**が設定される
+|Type|ゼロ値|
+|:---|:---|
+|符号付整数|int8, int16, int32, int64
+|符号無し整数|uint8, uint16, uint32, uint64|
 
 
 # 参考サイト  
 「【Go】基本文法①(基礎)」<https://qiita.com/k-penguin-sato/items/1d0e1c6b4bf937996cd3>    
 「Goで関数を定義して呼び出す方法」<https://www.codeflow.site/ja/article/how-to-define-and-call-functions-in-go>  
-「Goプログラミング言語仕様」<http://golang.jp/go_spec#Numeric_types>
+「Goプログラミング言語仕様」<http://golang.jp/go_spec#Numeric_types>  
 「浮動小数点って何?」<https://qiita.com/angel_p_57/items/24078ba4aa5881805ab2>
