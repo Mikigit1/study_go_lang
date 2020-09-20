@@ -1,14 +1,8 @@
-#はじめに
+# はじめに
 今話題になりつつあるGo。  
 「どんなものなんだろう…」「Goをちょっと触れてみたい…」と思った私が学習記録として残すものです。  
 
-
-[https://golang.org/:embed:cite]
-
-
-[:contents]
-
-<!-- more -->
+[https://golang.org/]
 
 # Goとは何か？
 2009年、<b>Google</b>が開発したプログラミング言語！    
@@ -20,14 +14,12 @@
 > ・RubyやPythonなどの動的な言語のように生産性（英語版）が高く、リーダブルであり、過度なボイラープレート（英語版）が必要ない  
 > ・IDEが必須ではない。ただし、十分にサポートする  
 > ・ネットワークおよびマルチプロセッシングをサポートする    
-（引用：[https://ja.wikipedia.org/wiki/Go_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E):title]）  
+（引用：[https://ja.wikipedia.org/wiki/Go_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)]）  
   
 かんたんに言えば、  
-***
-<div style="text-align: center;">
+***  
 <b>静的型付けのような言語</b>でも<b>動的型付けのように読み書きしやすい</b>プログラミング言語
-</div>
-***
+***  
 らしい。  
 これだけ聞くとワクワクしません？  
   
@@ -35,7 +27,7 @@
 その両方併せ持った言語だというのですから、気になって今回は勉強しようと思った次第です。  
 
 ### 1. 堅実かつシンプルな記法  
-GoはJavaとかと同じように、<span style="color: #ff0000"><b>静的型付け言語</b></span>です。  
+GoはJavaとかと同じように、<b>静的型付け言語</b>です。  
 変数宣言の仕方などは後ほど学びたいと思います。  
    
 静的型付け言語の代表のCやC++、Javaといった言語は、  
@@ -65,7 +57,7 @@ func main(){
 > <b>並列処理</b> : 複数のプロセスで各々のスレッドを<b>同時に</b>処理する  
 > <b>並行処理</b> : １つのプロセスで複数のスレッドを<b>切り替えつつ動作させる</b>ことで、複数のスレッドを同時に処理しているように見せる  
   
-Goはこの３つ目である<span style="color: #ff0000"><b>並行処理</b></span>を行うプログラムが書けます。  
+Goはこの３つ目である<b>並行処理</b>を行うプログラムが書けます。  
 このGoの並行処理を主に担う特徴が以下の２つ。  
 
 > ①<b>goroutine</b>（ゴルーチン）  
@@ -86,7 +78,7 @@ WindowsやMac、Linuxといった違うOSで、<b>コンパイルする際にOS�
 その際、<span style="color: #ff0000"><b>GOOS</b></span>と<span style="color: #ff0000"><b>GOARCH</b></span>を指定します。  
     
 
-[https://qiita.com/suin/items/7ddfcbc708c8863ea76a:title]
+[https://qiita.com/suin/items/7ddfcbc708c8863ea76a]
 
 
 【例】
@@ -99,19 +91,19 @@ $ GOOS=linux GOARCH=amd64 go build
   
 # Goが生まれたワケ  
 
-> コンピューター処理速度の向上やマルチコアコンピューターの出現、動的な型言語の人気、プログラミングの複雑化など環境がガラッと変わり、その変化する環境に対応する言語が求められました。  （引用：[https://freelance.techcareer.jp/skills/15/articles/1775/:title]）  
+> コンピューター処理速度の向上やマルチコアコンピューターの出現、動的な型言語の人気、プログラミングの複雑化など環境がガラッと変わり、その変化する環境に対応する言語が求められました。  （引用：[https://freelance.techcareer.jp/skills/15/articles/1775/]）  
   
 処理速度の向上とPythonといった動的言語の人気の高さも理由の一つ。  
   
-> プログラミング言語の中でGoは機能的には地味でどちらかといえば保守的です。しかし、いざ使ってみると生産性が非常に高いことに気づきます。とにかく開発者に無駄なことをさせません。  （引用：[https://codezine.jp/article/detail/9359:title]）  
+> プログラミング言語の中でGoは機能的には地味でどちらかといえば保守的です。しかし、いざ使ってみると生産性が非常に高いことに気づきます。とにかく開発者に無駄なことをさせません。  （引用：[https://codezine.jp/article/detail/9359]）  
     
-[https://golang.org/pkg/:embed:cite]
+[https://golang.org/pkg/]
 ライブラリも豊富で、幅が広く開発できるようです。  
   
 # Goの開発領域  
 
 [https://blog.golang.org/survey2018/fig8.svg:image=https://blog.golang.org/survey2018/fig8.svg]  
-(引用：[https://blog.golang.org/survey2018-results:title]）  
+(引用：[https://blog.golang.org/survey2018-results]）  
   
 Web開発の新しいサーバーサイド言語としての期待が高い事が見て取れます。  
 フレームワークを使わずとも、Webアプリが作れるなんて言われるほど標準機能が充実していることも理由でしょうか…？  
