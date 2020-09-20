@@ -43,13 +43,41 @@ func hello(){
 ```
 
 # 変数の型種類(組み込み型)
-組み込み＝最初から使えるデータ型　　
+組み込み＝最初から使えるデータ型　
+　
+## 論理値型（真偽値）  
+論理値を表すデータ型は、```bool```  
+true（正）とfalse（誤）を保持する事ができる。  
+
 ## 数値型
+### 整数
+数値型の一つである整数に関しては、符号付きと符号無しで書き方を分けることができる。  
+それぞれ表現できる数値幅が違うため、実装の際は注意が必要。  
 |Group|Type|Description|
 |:---|:---|:---|
 |符号付整数|int8, int16, int32, int64|int8（-128 to 127）,int16（-32768 to 32767）,int32 (-2147483648 to 2147483647),int64 (-9223372036854775808 to 9223372036854775807)|
+|符号無し整数|uint8, uint16, uint32, uint64|uint8(0 to 255),uint16 (0 to 65535),uint32(0 to 4294967295),uint64  (0 to 18446744073709551615)|
+  
+また下記でも表現ができる。  
+こちらのほうが実装に則した形で利用できそう。  
+```
+uint     32 または 64 ビット
+int      uintと同じサイズ
+```
+### 浮動小数点数  
+浮動小数点数とは、**計算による誤差の発生を前提とする代わりに扱える数値の幅を広くとった**もの。  
+逆の固定小数点数は先程のいわゆる整数データにあたる。  
+
+データ型は以下の2つ。  
+```
+float32   32bitの浮動小数点数
+float64   64bitの浮動小数点数
+```
+
 
 
 # 参考サイト  
 「【Go】基本文法①(基礎)」<https://qiita.com/k-penguin-sato/items/1d0e1c6b4bf937996cd3>    
-「Goで関数を定義して呼び出す方法」<https://www.codeflow.site/ja/article/how-to-define-and-call-functions-in-go>
+「Goで関数を定義して呼び出す方法」<https://www.codeflow.site/ja/article/how-to-define-and-call-functions-in-go>  
+「Goプログラミング言語仕様」<http://golang.jp/go_spec#Numeric_types>
+「浮動小数点って何?」<https://qiita.com/angel_p_57/items/24078ba4aa5881805ab2>
