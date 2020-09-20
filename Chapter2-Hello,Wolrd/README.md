@@ -35,4 +35,4 @@ Goのプログラムは、複数のパッケージから構成されている。
 これでmain.goのソースが起動する。  
   
 出力イメージはこんな感じ。  
-![出力イメージ](Chapter2-Hello,Wolrd/img/Hello,World.png)
+![出力イメージ](./img/Hello,World.png)
