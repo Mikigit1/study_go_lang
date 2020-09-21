@@ -16,6 +16,51 @@
 変数宣言の場合は、varを利用していたが、  
 定数宣言では、**const**を使って宣言することができる。  
 
+```go
+//constとデータ型を使った宣言
+const n int = 100
+
+//データ型を省略した宣言
+const lang = "文字列"
+
+//まとめた宣言
+const(
+	x = 5
+	y = 10
+)
+```
+# 型を明示しない場合  
+定数宣言で、型を省略した書き方```const 変数名　= 値```というようなものがあった。  
+Goではこの場合、型推論行い、デフォルトの型を設定する。  
+  
+|Name|Example|Type|
+|:---|:---|:---|
+|真偽値|true,false|bool|
+|整数|100,10|int|
+|浮動小数点数|1.5|float64|
+|複素数|2+3i|complex128|
+|文字列|"hoge"|string|
+|ルーン|"あ","A"|rune|  
+  
+このルーンについては、***unicode***を扱う為に最適な型らしいのですが、  
+詳しいことは調べきれていないので、参考URLを記載
+参考→「【Go】rune型という見慣れない型」<https://cres-tech.hatenablog.com/entry/2019/11/10/200000>
+
+```go
+package main
+
+import ("fmt"
+		"reflect"
+)
+//データ型を省略した宣言
+const lang = 1+4i //←ここに好きな値を入れる
+
+func main()  {
+	v := reflect.ValueOf(lang)
+	fmt.Println(v.Type())
+} 
+```
+この場合複素数を入れているため、```complex128```と出力されるはず。
 
 # 参考サイト  
 「Goの定数の型宣言」<https://qiita.com/Hiraku/items/9edcb355b21f760dcee0>
