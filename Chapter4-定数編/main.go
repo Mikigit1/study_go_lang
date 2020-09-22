@@ -16,11 +16,32 @@ const(
 	y = 10
 )
 
+//型推論で連続して値を入れてくれる例  
+const(
+	a = 1 + 1
+	b
+	c
+)
+
+//iotaを使った例
+const(
+	d = 1 + iota
+	e
+	f
+)
+
 func main()  {
 	fmt.Println(n)
 	fmt.Println(lang)
 	fmt.Println(x + y)
 
+	//定数langに入れた値を型推論でデフォルトの型を調べる
 	v := reflect.ValueOf(lang)
 	fmt.Println(v.Type())
+
+	//型推論で連続して値を入れてくれる例
+	fmt.Println(a,b,c)
+
+	//iotaを使った例
+	fmt.Println(d,e,f)
 }
